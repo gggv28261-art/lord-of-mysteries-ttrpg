@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>سجل المتجاوز — Lord of Mysteries TTRPG</title>
+  <meta name="theme-color" content="#0b0908" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="fog"></div>
+  <header class="topbar">
+    <div class="brand"><span class="seal">✦</span><div><strong>سجل المتجاوز</strong><small>Lord of Mysteries TTRPG</small></div></div>
+    <div class="top-actions">
+      <button id="modeBtn" class="ghost">وضع اللاعب</button>
+      <button id="exportBtn" class="ghost">تصدير</button>
+      <label class="ghost file-btn">استيراد<input id="importInput" type="file" accept="application/json" hidden></label>
+      <button id="resetBtn" class="danger ghost">إعادة</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="character-mini">
+        <div class="avatar" id="avatar">✦</div>
+        <div><b id="miniName">متجاوز مجهول</b><small id="miniPath">لا مسار محدد</small></div>
+      </div>
+      <nav id="nav"></nav>
+      <div class="save-state"><span class="dot"></span><span id="saveText">محفوظ محليًا</span></div>
+    </aside>
+
+    <main id="app" class="content"></main>
+  </div>
+
+  <div id="modal" class="modal hidden"><div class="modal-card"><button class="modal-close" onclick="UI.closeModal()">×</button><div id="modalBody"></div></div></div>
+  <div id="toast" class="toast"></div>
+  <script src="rulebook.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
